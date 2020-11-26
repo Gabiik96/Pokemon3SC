@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		42F2B77025706E0E002F60EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76F25706E0E002F60EC /* ContentView.swift */; };
 		42F2B77225706E11002F60EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F2B77125706E11002F60EC /* Assets.xcassets */; };
 		42F2B77525706E11002F60EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F2B77425706E11002F60EC /* Preview Assets.xcassets */; };
+		42F2B77F25706EFA002F60EC /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 42F2B77E25706EFA002F60EC /* PokemonAPI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42F2B77F25706EFA002F60EC /* PokemonAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +87,9 @@
 			dependencies = (
 			);
 			name = PokemonTest;
+			packageProductDependencies = (
+				42F2B77E25706EFA002F60EC /* PokemonAPI */,
+			);
 			productName = PokemonTest;
 			productReference = 42F2B76A25706E0E002F60EC /* PokemonTest.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +117,9 @@
 				Base,
 			);
 			mainGroup = 42F2B76125706E0E002F60EC;
+			packageReferences = (
+				42F2B77D25706EFA002F60EC /* XCRemoteSwiftPackageReference "PokemonAPI" */,
+			);
 			productRefGroup = 42F2B76B25706E0E002F60EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,6 +336,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		42F2B77D25706EFA002F60EC /* XCRemoteSwiftPackageReference "PokemonAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kinkofer/PokemonAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		42F2B77E25706EFA002F60EC /* PokemonAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 42F2B77D25706EFA002F60EC /* XCRemoteSwiftPackageReference "PokemonAPI" */;
+			productName = PokemonAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42F2B76225706E0E002F60EC /* Project object */;
 }
