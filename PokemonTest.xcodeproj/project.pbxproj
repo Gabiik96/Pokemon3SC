@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4285F3F625708535009C8002 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3F525708535009C8002 /* ImageLoader.swift */; };
+		4285F41125708ADD009C8002 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F40E25708ADD009C8002 /* GIFView.swift */; };
+		4285F41225708ADD009C8002 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F40F25708ADD009C8002 /* UIImageExtension.swift */; };
+		4285F41325708ADD009C8002 /* GIFPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F41025708ADD009C8002 /* GIFPlayer.swift */; };
 		42F2B76E25706E0E002F60EC /* PokemonTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */; };
 		42F2B77025706E0E002F60EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76F25706E0E002F60EC /* ContentView.swift */; };
 		42F2B77225706E11002F60EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F2B77125706E11002F60EC /* Assets.xcassets */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4285F3F525708535009C8002 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		4285F40E25708ADD009C8002 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		4285F40F25708ADD009C8002 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		4285F41025708ADD009C8002 /* GIFPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFPlayer.swift; sourceTree = "<group>"; };
 		42F2B76A25706E0E002F60EC /* PokemonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTestApp.swift; sourceTree = "<group>"; };
 		42F2B76F25706E0E002F60EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
