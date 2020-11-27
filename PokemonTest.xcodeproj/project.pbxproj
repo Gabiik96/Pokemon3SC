@@ -7,28 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4285F3EC25707B08009C8002 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3EB25707B08009C8002 /* PokemonCell.swift */; };
+		4285F3F125707FE4009C8002 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3F025707FE4009C8002 /* PokemonDetailView.swift */; };
 		4285F3F625708535009C8002 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3F525708535009C8002 /* ImageLoader.swift */; };
 		4285F41125708ADD009C8002 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F40E25708ADD009C8002 /* GIFView.swift */; };
 		4285F41225708ADD009C8002 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F40F25708ADD009C8002 /* UIImageExtension.swift */; };
 		4285F41325708ADD009C8002 /* GIFPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F41025708ADD009C8002 /* GIFPlayer.swift */; };
+		4285F41625717071009C8002 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F41525717071009C8002 /* ImageCache.swift */; };
+		4285F419257170B2009C8002 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F418257170B2009C8002 /* ImageView.swift */; };
 		42F2B76E25706E0E002F60EC /* PokemonTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */; };
 		42F2B77025706E0E002F60EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76F25706E0E002F60EC /* ContentView.swift */; };
 		42F2B77225706E11002F60EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F2B77125706E11002F60EC /* Assets.xcassets */; };
 		42F2B77525706E11002F60EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F2B77425706E11002F60EC /* Preview Assets.xcassets */; };
 		42F2B77F25706EFA002F60EC /* PokemonAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 42F2B77E25706EFA002F60EC /* PokemonAPI */; };
+		42F2B78325706F86002F60EC /* NetworkingCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B78225706F86002F60EC /* NetworkingCustom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4285F3EB25707B08009C8002 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		4285F3F025707FE4009C8002 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		4285F3F525708535009C8002 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4285F40E25708ADD009C8002 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
 		4285F40F25708ADD009C8002 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		4285F41025708ADD009C8002 /* GIFPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFPlayer.swift; sourceTree = "<group>"; };
+		4285F41525717071009C8002 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		4285F418257170B2009C8002 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		42F2B76A25706E0E002F60EC /* PokemonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTestApp.swift; sourceTree = "<group>"; };
 		42F2B76F25706E0E002F60EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		42F2B77125706E11002F60EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42F2B77425706E11002F60EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		42F2B77625706E11002F60EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F2B78225706F86002F60EC /* NetworkingCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingCustom.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +53,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4285F3E925707AE9009C8002 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4285F3EB25707B08009C8002 /* PokemonCell.swift */,
+				4285F3F025707FE4009C8002 /* PokemonDetailView.swift */,
+				4285F418257170B2009C8002 /* ImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4285F3F425708525009C8002 /* Bindings */ = {
+			isa = PBXGroup;
+			children = (
+				4285F3F525708535009C8002 /* ImageLoader.swift */,
+				4285F41525717071009C8002 /* ImageCache.swift */,
+			);
+			path = Bindings;
+			sourceTree = "<group>";
+		};
+		4285F40C25708AC2009C8002 /* Customs */ = {
+			isa = PBXGroup;
+			children = (
+				4285F40D25708ACD009C8002 /* GIF */,
+			);
+			path = Customs;
+			sourceTree = "<group>";
+		};
+		4285F40D25708ACD009C8002 /* GIF */ = {
+			isa = PBXGroup;
+			children = (
+				4285F41025708ADD009C8002 /* GIFPlayer.swift */,
+				4285F40E25708ADD009C8002 /* GIFView.swift */,
+				4285F40F25708ADD009C8002 /* UIImageExtension.swift */,
+			);
+			path = GIF;
+			sourceTree = "<group>";
+		};
 		42F2B76125706E0E002F60EC = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +109,10 @@
 		42F2B76C25706E0E002F60EC /* PokemonTest */ = {
 			isa = PBXGroup;
 			children = (
+				4285F3F425708525009C8002 /* Bindings */,
+				42F2B78125706F71002F60EC /* Services */,
+				4285F3E925707AE9009C8002 /* View */,
+				4285F40C25708AC2009C8002 /* Customs */,
 				42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */,
 				42F2B76F25706E0E002F60EC /* ContentView.swift */,
 				42F2B77125706E11002F60EC /* Assets.xcassets */,
@@ -77,6 +128,14 @@
 				42F2B77425706E11002F60EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		42F2B78125706F71002F60EC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				42F2B78225706F86002F60EC /* NetworkingCustom.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,8 +213,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4285F41625717071009C8002 /* ImageCache.swift in Sources */,
+				42F2B78325706F86002F60EC /* NetworkingCustom.swift in Sources */,
+				4285F3F125707FE4009C8002 /* PokemonDetailView.swift in Sources */,
+				4285F41325708ADD009C8002 /* GIFPlayer.swift in Sources */,
+				4285F419257170B2009C8002 /* ImageView.swift in Sources */,
+				4285F3F625708535009C8002 /* ImageLoader.swift in Sources */,
+				4285F3EC25707B08009C8002 /* PokemonCell.swift in Sources */,
+				4285F41125708ADD009C8002 /* GIFView.swift in Sources */,
 				42F2B77025706E0E002F60EC /* ContentView.swift in Sources */,
 				42F2B76E25706E0E002F60EC /* PokemonTestApp.swift in Sources */,
+				4285F41225708ADD009C8002 /* UIImageExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
