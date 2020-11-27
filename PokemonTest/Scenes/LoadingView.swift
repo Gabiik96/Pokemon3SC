@@ -14,12 +14,21 @@ struct LoadingView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Image("pokeLogo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 300, height: 250)
+                
                 Spacer()
+                
                 GIFView(gifName: "PokeballLoading")
                     .frame(width: 200, height: 200)
                 
                 ProgressBar(value: self.$api.progressValue)
+                    .frame(height: 30)
                     .padding()
+                
+                Spacer()
             }
             .navigationBarHidden(true)
         }
@@ -32,13 +41,13 @@ struct ProgressBar: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: .center) {
-                Rectangle().frame(width: geometry.size.width , height: 30)
+                Rectangle().frame(width: geometry.size.width , height: geometry.size.height)
                     .opacity(0.3)
-                    .border(Color.yellow, width: 4)
-                    .foregroundColor(Color(UIColor.systemTeal))
+                    .border(Color.pokemonBlue, width: 4)
+                    .foregroundColor(Color(UIColor.systemYellow))
                 
-                Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: 22)
-                    .foregroundColor(Color(UIColor.systemBlue))
+                Rectangle().frame(width: min(CGFloat(self.value)*geometry.size.width, geometry.size.width), height: geometry.size.height - 8)
+                    .foregroundColor(Color.pokemonYellow)
                     .animation(.linear)
             }
         }
