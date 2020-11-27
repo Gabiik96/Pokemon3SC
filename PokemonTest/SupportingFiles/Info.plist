@@ -6,6 +6,12 @@
 	<array>
 		<string>PokemonHollow.ttf</string>
 		<string>PokemonSolid.ttf</string>
+		<string>Walkway_Black.ttf</string>
+		<string>Walkway_Bold.ttf</string>
+		<string>Walkway_SemiBold.ttf</string>
+		<string>Walkway_Oblique.ttf</string>
+		<string>Walkway_Oblique_Bold.ttf</string>
+		<string>Walkway_Oblique_SemiBold.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

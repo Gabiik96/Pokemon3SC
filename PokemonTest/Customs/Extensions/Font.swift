@@ -15,6 +15,30 @@ extension Font {
     public static func PokemonSolid(size: CGFloat) -> Font {
         return Font.custom("PokemonSolidNormal", size: size)
     }
+    
+    public static func WalkwayBlack(size: CGFloat) -> Font {
+        return Font.custom("Walkway_Black", size: size)
+    }
+    
+    public static func WalkwayBold(size: CGFloat) -> Font {
+        return Font.custom("Walkway_Bold", size: size)
+    }
+    
+    public static func WalkwaySemiBold(size: CGFloat) -> Font {
+        return Font.custom("Walkway_SemiBold", size: size)
+    }
+    
+    public static func WalkwayOblique(size: CGFloat) -> Font {
+        return Font.custom("Walkway_Oblique", size: size)
+    }
+    
+    public static func WalkwayObliqueBold(size: CGFloat) -> Font {
+        return Font.custom("Walkway_Oblique_Bold", size: size)
+    }
+    
+    public static func WalkwayObliqueSemiBold(size: CGFloat) -> Font {
+        return Font.custom("Walkway_Oblique_SemiBold", size: size)
+    }
 }
 
 struct TitleFont: ViewModifier {
