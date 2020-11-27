@@ -10,11 +10,22 @@ import SwiftUI
 @main
 struct PokemonTestApp: App {
     
-    var api = APICustom()
+    @ObservedObject var api = APICustom()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if api.progressValue < 1 {
+                LoadingView()
+                    .environmentObject(api)
+                    .onAppear() {
+                        api.getLimit()
+                    }
+            } else {
+                ContentView()
+                    .environmentObject(api)
+                    
+            }
         }
     }
+    
 }
