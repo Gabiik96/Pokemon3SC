@@ -23,7 +23,7 @@ class ImageLoader: ObservableObject {
             return
         }
 
-        print("Cache miss, loading from url")
+        print("Cache is empty, loading from url")
         loadImageFromUrl()
     }
 

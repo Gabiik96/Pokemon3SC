@@ -53,14 +53,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4285F3E925707AE9009C8002 /* View */ = {
+		4285F3E925707AE9009C8002 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				4285F3EB25707B08009C8002 /* PokemonCell.swift */,
 				4285F3F025707FE4009C8002 /* PokemonDetailView.swift */,
 				4285F418257170B2009C8002 /* ImageView.swift */,
 			);
-			path = View;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4285F3F425708525009C8002 /* Bindings */ = {
@@ -90,6 +90,24 @@
 			path = GIF;
 			sourceTree = "<group>";
 		};
+		4285F41C25717595009C8002 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */,
+				42F2B77125706E11002F60EC /* Assets.xcassets */,
+				42F2B77625706E11002F60EC /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		4285F41E257175CE009C8002 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				42F2B76F25706E0E002F60EC /* ContentView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 		42F2B76125706E0E002F60EC = {
 			isa = PBXGroup;
 			children = (
@@ -109,14 +127,12 @@
 		42F2B76C25706E0E002F60EC /* PokemonTest */ = {
 			isa = PBXGroup;
 			children = (
-				4285F3F425708525009C8002 /* Bindings */,
 				42F2B78125706F71002F60EC /* Services */,
-				4285F3E925707AE9009C8002 /* View */,
+				4285F41E257175CE009C8002 /* Scenes */,
+				4285F3E925707AE9009C8002 /* Components */,
+				4285F3F425708525009C8002 /* Bindings */,
 				4285F40C25708AC2009C8002 /* Customs */,
-				42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */,
-				42F2B76F25706E0E002F60EC /* ContentView.swift */,
-				42F2B77125706E11002F60EC /* Assets.xcassets */,
-				42F2B77625706E11002F60EC /* Info.plist */,
+				4285F41C25717595009C8002 /* SupportingFiles */,
 				42F2B77325706E11002F60EC /* Preview Content */,
 			);
 			path = PokemonTest;
@@ -355,7 +371,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonTest/Preview Content\"";
 				DEVELOPMENT_TEAM = Q4YKPW2G86;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PokemonTest/Info.plist;
+				INFOPLIST_FILE = PokemonTest/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -377,7 +393,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PokemonTest/Preview Content\"";
 				DEVELOPMENT_TEAM = Q4YKPW2G86;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PokemonTest/Info.plist;
+				INFOPLIST_FILE = PokemonTest/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
