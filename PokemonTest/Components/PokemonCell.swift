@@ -19,7 +19,9 @@ struct PokemonCell: View {
         VStack {
             ImageView(withURL: (self.spriteIsShiny ? self.sprite.frontShiny : self.sprite.frontDefault)!)
             
-            Text(name)
+            StrokeText(text: name, width: 2, color: .blue)
+                .foregroundColor(.yellow)
+                .font(.PokemonSolid(size: 20))
             
         }.frame(minWidth: 100, maxWidth: 500, minHeight: 150, maxHeight: 750, alignment: .center)
     }

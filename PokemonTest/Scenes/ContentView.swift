@@ -11,6 +11,7 @@ import PokemonAPI
 struct ContentView: View {
     
     @ObservedObject var api = APICustom()
+    @EnvironmentObject var api: APICustom
     @State var stripeIsShiny = false
     @State var limit = 20
     @State var text = "hello"
@@ -20,6 +21,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                
+                HStack(alignment: .center) {
+                    GIFView(gifName: "PokeballLoading")
+                        .frame(width: 50, height: 50)
+                    
+                    StrokeText(text: "LEARN ALL ABOUT YOUR \nFAVOURITE POKEMON", width: 2, color: .blue)
+                        .foregroundColor(.yellow)
+                        .font(.PokemonSolid(size: 25))
+                    
+                    
+                    GIFView(gifName: "PokeballLoading")
+                        .frame(width: 50, height: 50)
+                }.padding(.top, 20)
+                
+                
                 Button(action: {
                     stripeIsShiny.toggle()
                 }){
