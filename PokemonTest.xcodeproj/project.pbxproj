@@ -20,6 +20,7 @@
 		4285F42E257176FF009C8002 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F42D257176FF009C8002 /* Font.swift */; };
 		42EB683B257180F80065B741 /* StrokeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EB683A257180F80065B741 /* StrokeText.swift */; };
 		42EB683E25718EBD0065B741 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EB683D25718EBD0065B741 /* LoadingView.swift */; };
+		42EC833925719C9C00925935 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EC833825719C9C00925935 /* Color.swift */; };
 		42F2B76E25706E0E002F60EC /* PokemonTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */; };
 		42F2B77025706E0E002F60EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F2B76F25706E0E002F60EC /* ContentView.swift */; };
 		42F2B77225706E11002F60EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42F2B77125706E11002F60EC /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		4285F42D257176FF009C8002 /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		42EB683A257180F80065B741 /* StrokeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokeText.swift; sourceTree = "<group>"; };
 		42EB683D25718EBD0065B741 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		42EC833825719C9C00925935 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		42F2B76A25706E0E002F60EC /* PokemonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42F2B76D25706E0E002F60EC /* PokemonTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTestApp.swift; sourceTree = "<group>"; };
 		42F2B76F25706E0E002F60EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				4285F42D257176FF009C8002 /* Font.swift */,
+				42EC833825719C9C00925935 /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				42EB683E25718EBD0065B741 /* LoadingView.swift in Sources */,
 				4285F3F625708535009C8002 /* ImageLoader.swift in Sources */,
 				4285F3EC25707B08009C8002 /* PokemonCell.swift in Sources */,
+				42EC833925719C9C00925935 /* Color.swift in Sources */,
 				4285F41125708ADD009C8002 /* GIFView.swift in Sources */,
 				4285F42E257176FF009C8002 /* Font.swift in Sources */,
 				42F2B77025706E0E002F60EC /* ContentView.swift in Sources */,
