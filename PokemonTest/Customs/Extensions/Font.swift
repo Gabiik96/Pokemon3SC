@@ -9,11 +9,11 @@ import SwiftUI
 
 extension Font {
     public static func PokemonHollow(size: CGFloat) -> Font {
-        return Font.custom("PokemonHollow", size: size)
+        return Font.custom("PokemonHollowNormal", size: size)
     }
     
     public static func PokemonSolid(size: CGFloat) -> Font {
-        return Font.custom("PokemonSolid", size: size)
+        return Font.custom("PokemonSolidNormal", size: size)
     }
 }
 
