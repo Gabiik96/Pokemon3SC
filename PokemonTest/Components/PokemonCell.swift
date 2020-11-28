@@ -22,7 +22,6 @@ struct PokemonCell: View {
             CellBackground()
                 .fill(RadialGradient(gradient: Gradient(colors: [.white, color]), center: .center, startRadius: 1, endRadius: 100))
                 .cornerRadius(15)
-                .frame(width: 180, height: 250)
             
             VStack {
                 ImageView(withURL: ( self.isShiny ? (self.isFemale ? self.sprite.frontShinyFemale : self.sprite.frontShiny)!
@@ -32,7 +31,10 @@ struct PokemonCell: View {
                 Text(name.uppercased())
                     .foregroundColor(.white)
                     .shadow(color: .pokemonBlue, radius: 1)
-                    .font(.WalkwayBlack(size: 20))
+                    .font(.WalkwayBlack(size: 25))
+                    .scaledToFit()
+                    .padding(.init(top: 0, leading: 5, bottom: 5, trailing: 5))
+                    .minimumScaleFactor(0.1)
                 
             }.frame(minWidth: 100, maxWidth: 500, minHeight: 150, maxHeight: 750, alignment: .center)
         }

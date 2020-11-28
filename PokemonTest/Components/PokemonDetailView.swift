@@ -99,13 +99,12 @@ struct PokemonDetailView: View {
                     Text("Types: ")
                     VStack(alignment: .leading) {
                         ForEach(0 ..< pokemon.types!.count, id: \.self) { index in
-                            Text(String(pokemon.types![index].type!.name ?? "unknown").capitalizingFirstLetter()).bold()
+                            Text(String(pokemon.types![index].type!.name ?? "unknown")).bold()
                         }
                     }.padding(.leading, -5)
                 }
             }.font(.system(size: 14))
         }.padding(.leading, 25)
-        
     }
     
 }
