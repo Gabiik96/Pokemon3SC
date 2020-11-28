@@ -10,6 +10,7 @@ import PokemonAPI
 
 class APICustom: ObservableObject {
     @Published var pokemonStore = [PKMPokemon]()
+    @Published var abilitiesStore = [PKMAbility]()
     
     @Published var progressValue: Float = 0
     @Published var isLoading = true
@@ -44,6 +45,21 @@ class APICustom: ObservableObject {
                     print(error.localizedDescription)
                     self.progressValue += (1 / Float(self.limit))
                     print(self.progressValue)
+                }
+            }
+        }
+    }
+    
+    func getAbilities(resource: [PKMPokemonAbility]) {
+        abilitiesStore.removeAll()
+        
+        for ability in resource {
+            pokeAPI.resourceService.fetch(ability.ability!) { result in
+                switch result {
+                case .success(let ability):
+                    self.abilitiesStore.append(ability)
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             }
         }
