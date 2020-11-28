@@ -9,14 +9,17 @@ import SwiftUI
 import PokemonAPI
 
 struct PokemonDetailView: View {
-    let pokemon: PKMPokemon
     
+    let pokemon: PKMPokemon
+    var categories = ["Abilities", "Inventory", "Moves"]
+    
+    @State var pickerSelected = 0
     @State var isShiny = false
+    
     
     var body: some View {
         ZStack {
             background
-            
             VStack {
                 ZStack(alignment: .top) {
                     RoundedRectangle(cornerRadius: 100)
@@ -31,12 +34,15 @@ struct PokemonDetailView: View {
                             shineBtn
                         }
                     }
-                    
                 }.frame(height: 300)
-                
                 pokemonName
-                
                 Spacer ()
+                VStack {
+                    pickerBar
+                    Spacer()
+                    AbilitiesView(abilitiesResource: pokemon.abilities!)
+                }
+                
                 
             }
         }
@@ -107,4 +113,41 @@ struct PokemonDetailView: View {
         }.padding(.leading, 25)
     }
     
+    private var pickerBar: some View {
+        Picker(selection: $pickerSelected.animation(), label: Text("")) {
+            ForEach(0 ..< categories.count) {
+                Text(self.categories[$0])
+            }
+        }.pickerStyle(SegmentedPickerStyle())
+    }
+    
+    
 }
+
+
+struct AbilitiesView: View {
+    @EnvironmentObject var api: APICustom
+    
+    let abilitiesResource: [PKMPokemonAbility]
+    @State private var abilities = [PKMAbility]()
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            ForEach(abilities, id: \.self) { ability in
+                Text(ability.name?.uppercased() ?? "Unknown").bold()
+                Text("Main series:  \(ability.isMainSeries ?? false ? "Yes" : "No")")
+                Text(ability.effectEntries?.first?.effect ?? "unknown")
+                
+                
+            }
+            Spacer()
+        }.onAppear() {
+            api.getAbilities(resource: self.abilitiesResource)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.abilities = api.abilitiesStore
+                print(self.abilities)
+            }
+        }
+    }
+}
+
