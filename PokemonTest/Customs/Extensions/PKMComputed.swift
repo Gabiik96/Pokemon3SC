@@ -34,3 +34,15 @@ extension PKMPokemon {
     }
 }
 
+extension PKMMove {
+    var shortDescription: String {
+        return effectEntries?.first(where: { $0.language!.name == "en" })?.shortEffect ?? "Unknown description"
+    }
+}
+
+extension PKMAbility {
+    var description: String {
+        return effectEntries?.first(where: { $0.language!.name == "en" })?.effect ?? "Unknown description"
+    }
+}
+

@@ -46,7 +46,7 @@ struct PokemonDetailView: View {
                     } else if pickerSelected == 1 {
                         StatsView(statsResource: pokemon.stats!)
                     } else if pickerSelected == 2 {
-                        MovesView()
+                        MovesView(movesResource: pokemon.moves!)
                     }
                 }
                 
@@ -119,10 +119,32 @@ struct PokemonDetailView: View {
 }
 
 struct MovesView: View {
+    @EnvironmentObject var api: APICustom
     
+    @State private var moves = [PKMMove]()
+    
+    let movesResource: [PKMPokemonMove]
     
     var body: some View {
-        Text("Moves")
+        ScrollView {
+            VStack(alignment: .leading) {
+                ForEach(moves, id: \.self) { move in
+                    Text(move.name?.uppercased() ?? "Unknown")
+                        .bold()
+                        .padding(.top, 5)
+                    if move.accuracy != nil { Text("Accuracy: \(move.accuracy!)") }
+                    if move.effectChance != nil { Text("Chance: \(move.effectChance!)") }
+                    if move.pp != nil { Text("Power points: \(move.pp!)") }
+                    if move.power != nil { Text("Base power: \(move.power!)") }
+                    Text(move.shortDescription)
+                }
+            }.padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
+        }.onAppear() {
+            api.getMoves(resource: self.movesResource)
+            // Delay to have result ready
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.moves = api.movesStore
+            }
+        }
     }
-    
 }

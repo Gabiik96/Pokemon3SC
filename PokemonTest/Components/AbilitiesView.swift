@@ -25,12 +25,12 @@ struct AbilitiesView: View {
                         Image(systemName: "m.circle")
                             .show(isVisible: (ability.isMainSeries ?? false) ? true : false)
                     }
-                    .padding(.init(top: 20, leading: 10, bottom: 0, trailing: 10))
+                    .padding(.top, 5)
                     
-                    Text(ability.effectEntries?.filter({ $0.language?.name?.contains("en") as! Bool }).first?.effect ?? "Unknown effect of ability")
-                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                    Text(ability.description)
+                        
                 }
-            }
+            }.padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
         }.onAppear() {
             api.getAbilities(resource: self.abilitiesResource)
             // Delay to have result ready

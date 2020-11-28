@@ -31,3 +31,15 @@ extension PKMAbility: Hashable {
     }
     
 }
+
+extension PKMMove: Hashable {
+    
+    public static func == (lhs: PKMMove, rhs: PKMMove) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+}

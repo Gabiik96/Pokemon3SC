@@ -26,11 +26,15 @@ struct LoadingView: View {
                 
                 ProgressBar(value: self.$api.progressValue)
                     .frame(height: 30)
-                    .padding()
+                    .padding(.top)
+                    .padding(.leading)
+                    .padding(.trailing)
+                
+                Text("Loading...")
+                    .font(.WalkwayBlack(size: 20))
                 
                 Spacer()
-            }
-            .navigationBarHidden(true)
+            }.navigationBarHidden(true)
         }
     }
 }

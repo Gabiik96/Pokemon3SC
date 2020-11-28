@@ -14,20 +14,20 @@ struct PokemonTestApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            if api.progressValue < 1 {
-//                LoadingView()
-//                    .environmentObject(api)
-//                    .onAppear() {
-//                        api.getLimit()
-//                    }
-//            } else {
+            if api.progressValue < 1 {
+                LoadingView()
+                    .environmentObject(api)
+                    .onAppear() {
+                        api.getLimit()
+                    }
+            } else {
                 ContentView()
                     .environmentObject(api)
                     .onAppear() {
                         api.getLimit()
                     }
             }
-//        }
+        }
     }
     
 }
