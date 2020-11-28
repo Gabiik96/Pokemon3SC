@@ -11,6 +11,10 @@
 		420B2DC8257275740010BAEA /* PKMPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DC7257275740010BAEA /* PKMPokemonType.swift */; };
 		420B2DD22572A8BB0010BAEA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DD12572A8BB0010BAEA /* SearchBar.swift */; };
 		420B2DD92572B9040010BAEA /* ShineButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DD82572B9040010BAEA /* ShineButton.swift */; };
+		420B2DDE2572BCDA0010BAEA /* ShowViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DDD2572BCDA0010BAEA /* ShowViewModifier.swift */; };
+		420B2DE12572C93B0010BAEA /* AbilitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DE02572C93B0010BAEA /* AbilitiesView.swift */; };
+		420B2DE42572EBBA0010BAEA /* StatBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DE32572EBBA0010BAEA /* StatBarView.swift */; };
+		420B2DE72572EBF90010BAEA /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DE62572EBF90010BAEA /* StatsView.swift */; };
 		426B98D72571AC5900516642 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B98D62571AC5900516642 /* ProgressBar.swift */; };
 		4278A0492571AA9F0053571A /* Walkway_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0402571AA9F0053571A /* Walkway_Bold.ttf */; };
 		4278A04B2571AA9F0053571A /* Walkway_Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0422571AA9F0053571A /* Walkway_Oblique.ttf */; };
@@ -47,6 +51,10 @@
 		420B2DC7257275740010BAEA /* PKMPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMPokemonType.swift; sourceTree = "<group>"; };
 		420B2DD12572A8BB0010BAEA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		420B2DD82572B9040010BAEA /* ShineButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShineButton.swift; sourceTree = "<group>"; };
+		420B2DDD2572BCDA0010BAEA /* ShowViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowViewModifier.swift; sourceTree = "<group>"; };
+		420B2DE02572C93B0010BAEA /* AbilitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesView.swift; sourceTree = "<group>"; };
+		420B2DE32572EBBA0010BAEA /* StatBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBarView.swift; sourceTree = "<group>"; };
+		420B2DE62572EBF90010BAEA /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		426B98D62571AC5900516642 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		4278A0402571AA9F0053571A /* Walkway_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Bold.ttf; sourceTree = "<group>"; };
 		4278A0422571AA9F0053571A /* Walkway_Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Oblique.ttf; sourceTree = "<group>"; };
@@ -111,6 +119,9 @@
 				4285F3EB25707B08009C8002 /* PokemonCell.swift */,
 				4285F3F025707FE4009C8002 /* PokemonDetailView.swift */,
 				420B2DC1257262E40010BAEA /* BackgroundView.swift */,
+				420B2DE02572C93B0010BAEA /* AbilitiesView.swift */,
+				420B2DE32572EBBA0010BAEA /* StatBarView.swift */,
+				420B2DE62572EBF90010BAEA /* StatsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -120,6 +131,7 @@
 			children = (
 				4285F3F525708535009C8002 /* ImageLoader.swift */,
 				4285F41525717071009C8002 /* ImageCache.swift */,
+				420B2DDD2572BCDA0010BAEA /* ShowViewModifier.swift */,
 			);
 			path = Bindings;
 			sourceTree = "<group>";
@@ -333,8 +345,11 @@
 				4285F41325708ADD009C8002 /* GIFPlayer.swift in Sources */,
 				4285F419257170B2009C8002 /* ImageView.swift in Sources */,
 				420B2DD92572B9040010BAEA /* ShineButton.swift in Sources */,
+				420B2DE12572C93B0010BAEA /* AbilitiesView.swift in Sources */,
 				42EB683E25718EBD0065B741 /* LoadingView.swift in Sources */,
+				420B2DE42572EBBA0010BAEA /* StatBarView.swift in Sources */,
 				426B98D72571AC5900516642 /* ProgressBar.swift in Sources */,
+				420B2DDE2572BCDA0010BAEA /* ShowViewModifier.swift in Sources */,
 				42E1F09A2571BEB000337599 /* PKMPokemon.swift in Sources */,
 				4285F3F625708535009C8002 /* ImageLoader.swift in Sources */,
 				4285F3EC25707B08009C8002 /* PokemonCell.swift in Sources */,
@@ -345,6 +360,7 @@
 				42E1F09D2571CBB100337599 /* CellBackground.swift in Sources */,
 				42F2B77025706E0E002F60EC /* ContentView.swift in Sources */,
 				42F2B76E25706E0E002F60EC /* PokemonTestApp.swift in Sources */,
+				420B2DE72572EBF90010BAEA /* StatsView.swift in Sources */,
 				42EB683B257180F80065B741 /* StrokeText.swift in Sources */,
 				420B2DC2257262E40010BAEA /* BackgroundView.swift in Sources */,
 				4285F41225708ADD009C8002 /* UIImageExtension.swift in Sources */,
