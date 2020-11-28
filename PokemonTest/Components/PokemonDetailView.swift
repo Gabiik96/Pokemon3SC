@@ -31,7 +31,7 @@ struct PokemonDetailView: View {
                         HStack {
                             basicDetails
                             Spacer()
-                            shineBtn
+                            ShineButton(toggle: $isShiny, paddingTrailing: 25)
                         }
                     }
                 }.frame(height: 300)
@@ -64,20 +64,6 @@ struct PokemonDetailView: View {
         }
     }
     
-    private var shineBtn: some View {
-        Button(action: {
-            isShiny.toggle()
-        }){
-            Image(systemName: self.isShiny ? "sun.max.fill" : "sun.max")
-                .resizable()
-                .shadow(color: .pokemonBlue, radius: 1.5)
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(self.isShiny ? .pokemonYellow : .pokemonBlue)
-                .frame(width: 50, height: 50)
-                .padding(.trailing, 25)
-        }
-    }
-    
     private var pokemonName: some View {
         StrokeText(text: pokemon.name!.uppercased(), width: 4, color: .pokemonBlue)
             .foregroundColor(.yellow)
@@ -105,7 +91,7 @@ struct PokemonDetailView: View {
                     Text("Types: ")
                     VStack(alignment: .leading) {
                         ForEach(0 ..< pokemon.types!.count, id: \.self) { index in
-                            Text(String(pokemon.types![index].type!.name ?? "unknown")).bold()
+                            Text(String(pokemon.types![index].type!.name?.capitalized ?? "unknown")).bold()
                         }
                     }.padding(.leading, -5)
                 }

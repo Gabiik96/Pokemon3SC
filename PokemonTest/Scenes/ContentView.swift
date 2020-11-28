@@ -28,7 +28,7 @@ struct ContentView: View {
                     HStack {
                         searchBar
                         Spacer()
-                        shineBtn
+                        ShineButton(toggle: $isShiny, height: 30)
                         layoutBtn
                     }.frame(width: UIScreen.main.bounds.size.width - 20)
                     scrollingBody
@@ -48,20 +48,6 @@ struct ContentView: View {
     private var searchBar: some View {
         SearchBarView(text: $query)
             .padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
-    }
-    
-    private var shineBtn: some View {
-        Button(action: {
-            isShiny.toggle()
-        }){
-            Image(systemName: self.isShiny ? "sun.max.fill" : "sun.max")
-                .resizable()
-                .shadow(color: .pokemonBlue, radius: 3)
-                .aspectRatio(contentMode: .fit)
-                .foregroundColor(self.isShiny ? .pokemonYellow : .pokemonBlue)
-                .frame(width: 30, height: 50)
-                .padding(.trailing, 5)
-        }
     }
     
     private var layoutBtn: some View {
