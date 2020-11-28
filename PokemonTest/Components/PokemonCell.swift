@@ -11,20 +11,30 @@ import PokemonAPI
 struct PokemonCell: View {
     
     let name: String
-    var spriteIsShiny: Bool
     let sprite: PKMPokemonSprites
+    let color: Color
+    
+    var isShiny: Bool
+    var isFemale: Bool
     
     var body: some View {
-        
-        VStack {
-            ImageView(withURL: (self.spriteIsShiny ? self.sprite.frontShiny : self.sprite.frontDefault)!)
+        ZStack {
+            CellBackground()
+                .fill(color)
+                .cornerRadius(15)
+                .frame(width: 180, height: 250)
             
-            StrokeText(text: name, width: 2, color: .blue)
-                .foregroundColor(.yellow)
-                .font(.PokemonSolid(size: 20))
-            
-        }.frame(minWidth: 100, maxWidth: 500, minHeight: 150, maxHeight: 750, alignment: .center)
+            VStack {
+                ImageView(withURL: ( self.isShiny ? (self.isFemale ? self.sprite.frontShinyFemale : self.sprite.frontShiny)!
+                                : (self.isFemale ? self.sprite.frontFemale : self.sprite.frontDefault)! )
+                ).shadow(color: .black, radius: 5)
+                
+                Text(name.uppercased())
+                    .foregroundColor(.white)
+                    .font(.WalkwayBlack(size: 20))
+                
+            }.frame(minWidth: 100, maxWidth: 500, minHeight: 150, maxHeight: 750, alignment: .center)
+        }
     }
     
 }
-
