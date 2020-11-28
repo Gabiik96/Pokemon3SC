@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		420B2DC2257262E40010BAEA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DC1257262E40010BAEA /* BackgroundView.swift */; };
+		420B2DC52572721E0010BAEA /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DC42572721E0010BAEA /* String.swift */; };
+		420B2DC8257275740010BAEA /* PKMPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DC7257275740010BAEA /* PKMPokemonType.swift */; };
 		426B98D72571AC5900516642 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B98D62571AC5900516642 /* ProgressBar.swift */; };
 		4278A0492571AA9F0053571A /* Walkway_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0402571AA9F0053571A /* Walkway_Bold.ttf */; };
 		4278A04B2571AA9F0053571A /* Walkway_Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0422571AA9F0053571A /* Walkway_Oblique.ttf */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		420B2DC1257262E40010BAEA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		420B2DC42572721E0010BAEA /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		420B2DC7257275740010BAEA /* PKMPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMPokemonType.swift; sourceTree = "<group>"; };
 		426B98D62571AC5900516642 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		4278A0402571AA9F0053571A /* Walkway_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Bold.ttf; sourceTree = "<group>"; };
 		4278A0422571AA9F0053571A /* Walkway_Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Oblique.ttf; sourceTree = "<group>"; };
@@ -167,7 +171,9 @@
 			children = (
 				4285F42D257176FF009C8002 /* Font.swift */,
 				42EC833825719C9C00925935 /* Color.swift */,
+				420B2DC42572721E0010BAEA /* String.swift */,
 				42E1F0992571BEB000337599 /* PKMPokemon.swift */,
+				420B2DC7257275740010BAEA /* PKMPokemonType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 			files = (
 				4285F41625717071009C8002 /* ImageCache.swift in Sources */,
 				42F2B78325706F86002F60EC /* NetworkingCustom.swift in Sources */,
+				420B2DC8257275740010BAEA /* PKMPokemonType.swift in Sources */,
+				420B2DC52572721E0010BAEA /* String.swift in Sources */,
 				4285F3F125707FE4009C8002 /* PokemonDetailView.swift in Sources */,
 				4285F41325708ADD009C8002 /* GIFPlayer.swift in Sources */,
 				4285F419257170B2009C8002 /* ImageView.swift in Sources */,
