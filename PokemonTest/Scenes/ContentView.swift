@@ -18,44 +18,47 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                
-                HStack(alignment: .center) {
+            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
+                BackgroundView()
+                VStack {
                     
-                    StrokeText(text: "LEARN ALL ABOUT YOUR \nFAVOURITE POKEMON", width: 2, color: .blue)
-                        .foregroundColor(.yellow)
-                        .font(.PokemonSolid(size: 25))
+                    HStack(alignment: .center) {
+                        
+                        StrokeText(text: "LEARN ALL ABOUT YOUR \nFAVOURITE POKEMON", width: 2, color: .blue)
+                            .foregroundColor(.yellow)
+                            .font(.PokemonSolid(size: 30))
+                        
+                        
+                    }.padding(.top, 20)
                     
                     
-                }.padding(.top, 20)
-                
-                
-                Button(action: {
-                    isShiny.toggle()
-                }){
-                    Image(systemName: "rectangle")
-                }
-                ScrollView {
-                    LazyVGrid(columns: layout) {
-                        ForEach(api.pokemonStore, id: \.id) { pokemon in
-                            NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
-                                PokemonCell(name: pokemon.name!,
-                                            sprite: pokemon.sprites!,
-                                            color: pokemon.backgroundColor,
-                                            isShiny: self.isShiny,
-                                            isFemale: self.isFemale)
-                            }.buttonStyle(PlainButtonStyle())
+                    Button(action: {
+                        isShiny.toggle()
+                    }){
+                        Image(systemName: self.isShiny ? "sun.max.fill" : "sun.max")
+                            .resizable()
+                            .shadow(color: .pokemonBlue, radius: 1.5)
+                            .aspectRatio(contentMode: .fit)
+                            .foregroundColor(self.isShiny ? .pokemonYellow : .pokemonBlue)
+                            .frame(width: 50, height: 50)
+                    }
+                    ScrollView(.vertical) {
+                        LazyVGrid(columns: layout) {
+                            ForEach(api.pokemonStore, id: \.id) { pokemon in
+                                NavigationLink(destination: PokemonDetailView(pokemon: pokemon)) {
+                                    PokemonCell(name: pokemon.name!,
+                                                sprite: pokemon.sprites!,
+                                                color: pokemon.backgroundColor,
+                                                isShiny: self.isShiny,
+                                                isFemale: self.isFemale)
+                                        .padding()
+                                }.buttonStyle(PlainButtonStyle())
+                            }
                         }
-                    }.padding()
+                    }.frame(width: UIScreen.main.bounds.size.width - 20)
                 }
+                .navigationBarHidden(true)
             }
-            .navigationBarHidden(true)
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
