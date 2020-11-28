@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		420B2DC2257262E40010BAEA /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DC1257262E40010BAEA /* BackgroundView.swift */; };
 		420B2DC8257275740010BAEA /* PKMPokemonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DC7257275740010BAEA /* PKMPokemonType.swift */; };
+		420B2DD22572A8BB0010BAEA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420B2DD12572A8BB0010BAEA /* SearchBar.swift */; };
 		426B98D72571AC5900516642 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426B98D62571AC5900516642 /* ProgressBar.swift */; };
 		4278A0492571AA9F0053571A /* Walkway_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0402571AA9F0053571A /* Walkway_Bold.ttf */; };
 		4278A04B2571AA9F0053571A /* Walkway_Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0422571AA9F0053571A /* Walkway_Oblique.ttf */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		420B2DC1257262E40010BAEA /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		420B2DC7257275740010BAEA /* PKMPokemonType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKMPokemonType.swift; sourceTree = "<group>"; };
+		420B2DD12572A8BB0010BAEA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		426B98D62571AC5900516642 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		4278A0402571AA9F0053571A /* Walkway_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Bold.ttf; sourceTree = "<group>"; };
 		4278A0422571AA9F0053571A /* Walkway_Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Oblique.ttf; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				42EB683A257180F80065B741 /* StrokeText.swift */,
 				426B98D62571AC5900516642 /* ProgressBar.swift */,
 				420B2DC1257262E40010BAEA /* BackgroundView.swift */,
+				420B2DD12572A8BB0010BAEA /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				42EC833925719C9C00925935 /* Color.swift in Sources */,
 				4285F41125708ADD009C8002 /* GIFView.swift in Sources */,
 				4285F42E257176FF009C8002 /* Font.swift in Sources */,
+				420B2DD22572A8BB0010BAEA /* SearchBar.swift in Sources */,
 				42E1F09D2571CBB100337599 /* CellBackground.swift in Sources */,
 				42F2B77025706E0E002F60EC /* ContentView.swift in Sources */,
 				42F2B76E25706E0E002F60EC /* PokemonTestApp.swift in Sources */,
