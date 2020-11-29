@@ -10,15 +10,14 @@ import PokemonAPI
 
 struct PokemonDetailView: View {
     @EnvironmentObject var api: APICustom
+    @AppStorage("shine") var isShiny: Bool = false
     
     let pokemon: PKMPokemon
     var categories = ["Abilities", "Stats", "Moves"]
     
-    @State var pickerSelected = 0
-    @State var isShiny = false
-    
-    @State var abilities = [PKMAbility]()
-    @State var moves = [PKMMove]()
+    @State private var pickerSelected = 1
+    @State private var abilities = [PKMAbility]()
+    @State private var moves = [PKMMove]()
     
     
     var body: some View {
@@ -36,7 +35,7 @@ struct PokemonDetailView: View {
                             HStack {
                                 basicDetails
                                 Spacer()
-                                ShineButton(toggle: $isShiny, paddingTrailing: 25)
+                                ShineButton(paddingTrailing: 25)
                             }
                         }
                     }.frame(height: UIScreen.main.bounds.size.height / 3)

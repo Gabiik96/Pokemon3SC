@@ -23,7 +23,7 @@
 		4278A04D2571AA9F0053571A /* Walkway_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0442571AA9F0053571A /* Walkway_Black.ttf */; };
 		4278A04E2571AA9F0053571A /* Walkway_SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0452571AA9F0053571A /* Walkway_SemiBold.ttf */; };
 		4278A04F2571AA9F0053571A /* Walkway_Oblique_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4278A0462571AA9F0053571A /* Walkway_Oblique_Bold.ttf */; };
-		4285F3EC25707B08009C8002 /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3EB25707B08009C8002 /* PokemonCell.swift */; };
+		4285F3EC25707B08009C8002 /* PokemonPosterCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3EB25707B08009C8002 /* PokemonPosterCard.swift */; };
 		4285F3F125707FE4009C8002 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3F025707FE4009C8002 /* PokemonDetailView.swift */; };
 		4285F3F625708535009C8002 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F3F525708535009C8002 /* ImageLoader.swift */; };
 		4285F41125708ADD009C8002 /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4285F40E25708ADD009C8002 /* GIFView.swift */; };
@@ -64,7 +64,7 @@
 		4278A0442571AA9F0053571A /* Walkway_Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Black.ttf; sourceTree = "<group>"; };
 		4278A0452571AA9F0053571A /* Walkway_SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_SemiBold.ttf; sourceTree = "<group>"; };
 		4278A0462571AA9F0053571A /* Walkway_Oblique_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Walkway_Oblique_Bold.ttf; sourceTree = "<group>"; };
-		4285F3EB25707B08009C8002 /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		4285F3EB25707B08009C8002 /* PokemonPosterCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonPosterCard.swift; sourceTree = "<group>"; };
 		4285F3F025707FE4009C8002 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
 		4285F3F525708535009C8002 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		4285F40E25708ADD009C8002 /* GIFView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				420B2DD42572B8C60010BAEA /* Customs */,
-				4285F3EB25707B08009C8002 /* PokemonCell.swift */,
+				4285F3EB25707B08009C8002 /* PokemonPosterCard.swift */,
 				4285F3F025707FE4009C8002 /* PokemonDetailView.swift */,
 				420B2DC1257262E40010BAEA /* BackgroundView.swift */,
 				420B2DE02572C93B0010BAEA /* AbilitiesView.swift */,
@@ -356,7 +356,7 @@
 				420B2DDE2572BCDA0010BAEA /* ShowViewModifier.swift in Sources */,
 				42E1F09A2571BEB000337599 /* PKMComputed.swift in Sources */,
 				4285F3F625708535009C8002 /* ImageLoader.swift in Sources */,
-				4285F3EC25707B08009C8002 /* PokemonCell.swift in Sources */,
+				4285F3EC25707B08009C8002 /* PokemonPosterCard.swift in Sources */,
 				42EC833925719C9C00925935 /* Color.swift in Sources */,
 				4285F41125708ADD009C8002 /* GIFView.swift in Sources */,
 				4285F42E257176FF009C8002 /* Font.swift in Sources */,

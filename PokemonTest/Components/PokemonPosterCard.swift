@@ -8,14 +8,13 @@
 import SwiftUI
 import PokemonAPI
 
-struct PokemonCell: View {
+struct PokemonPosterCard: View {
+    
+    @AppStorage("shine") private var isShiny: Bool = false
     
     let name: String
     let sprite: PKMPokemonSprites
     let color: Color
-    
-    var isShiny: Bool
-    var isFemale: Bool
     
     var body: some View {
         ZStack {
@@ -24,8 +23,7 @@ struct PokemonCell: View {
                 .cornerRadius(15)
             
             VStack {
-                ImageView(withURL: ( self.isShiny ? (self.isFemale ? self.sprite.frontShinyFemale : self.sprite.frontShiny)!
-                                : (self.isFemale ? self.sprite.frontFemale : self.sprite.frontDefault)! ))
+                ImageView(withURL: ((self.isShiny ? self.sprite.frontShiny : self.sprite.frontDefault)!))
                     .shadow(color: .black, radius: 5)
                 
                 Text(name.uppercased())

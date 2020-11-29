@@ -10,11 +10,9 @@ import PokemonAPI
 
 struct ContentView: View {
     
-    @EnvironmentObject var api: APICustom
-    @State var isShiny = false
-    @State var isFemale = false
+    @EnvironmentObject private var api: APICustom
+    @AppStorage("shine") private var isShiny: Bool = false
     @State var query = ""
-    @State var isLoading = true
     @State var selectedPokemon: PKMPokemon? = nil
     
     
@@ -23,7 +21,6 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            ZStack(alignment: Alignment(horizontal: .center, vertical: .center)) {
                 ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
                     BackgroundView()
                     VStack {
@@ -31,24 +28,12 @@ struct ContentView: View {
                         HStack {
                             searchBar
                             Spacer()
-                            ShineButton(toggle: $isShiny, height: 30)
+                            ShineButton(height: 30)
                             layoutBtn
                         }.frame(width: UIScreen.main.bounds.size.width - 20)
                         scrollingBody
                     }.navigationBarHidden(true)
                 }
-                Rectangle()
-                    .fill(Color.white)
-                    .opacity(0.5)
-                    .edgesIgnoringSafeArea(.all)
-                    .allowsHitTesting(true)
-                    .show(isVisible: self.isLoading)
-                ProgressView()
-                    .show(isVisible: self.isLoading)
-                    .onAppear() {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { self.isLoading = false }
-                    }
-            }
         }.sheet(item: self.$selectedPokemon, content: { poke in
             PokemonDetailView(pokemon: poke)
         })
@@ -83,11 +68,9 @@ struct ContentView: View {
         ScrollView(.vertical) {
             LazyVGrid(columns: gridLayout) {
                 ForEach((api.pokemonStore.filter({ query.isEmpty ? true : $0.name!.contains(query.lowercased()) })), id: \.id) { pokemon in
-                    PokemonCell(name: pokemon.name!,
+                    PokemonPosterCard(name: pokemon.name!,
                                 sprite: pokemon.sprites!,
-                                color: pokemon.backgroundColor,
-                                isShiny: self.isShiny,
-                                isFemale: self.isFemale)
+                                color: pokemon.backgroundColor)
                         .onTapGesture {
                             self.selectedPokemon = pokemon
                         }

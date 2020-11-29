@@ -14,10 +14,10 @@ class APICustom: ObservableObject {
     @Published var movesStore = [PKMMove]()
     
     @Published var progressValue: Float = 0
-    @Published var isLoading = true
+    
+    private var limit = 0
     
     let pokeAPI = PokemonAPI()
-    var limit = 0
     
     func getAllPokemons(){
         DispatchQueue.main.async {
