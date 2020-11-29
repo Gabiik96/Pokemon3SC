@@ -29,6 +29,9 @@ struct LoadingView: View {
                     .padding(.top)
                     .padding(.leading)
                     .padding(.trailing)
+                    .onReceive(self.api.$progressValue) { _ in
+                        self.api.pokemonStore = Array(Set(self.api.pokemonStore))
+                    }
                 
                 Text("Loading...")
                     .font(.WalkwayBlack(size: 20))

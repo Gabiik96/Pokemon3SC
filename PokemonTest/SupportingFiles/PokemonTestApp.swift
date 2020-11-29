@@ -18,14 +18,11 @@ struct PokemonTestApp: App {
                 LoadingView()
                     .environmentObject(api)
                     .onAppear() {
-                        api.getLimit()
+                        api.getAllPokemons()
                     }
             } else {
                 ContentView()
                     .environmentObject(api)
-                    .onAppear() {
-                        api.getLimit()
-                    }
             }
         }
     }

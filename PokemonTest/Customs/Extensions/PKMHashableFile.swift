@@ -8,6 +8,18 @@
 import SwiftUI
 import PokemonAPI
 
+extension PKMPokemon: Hashable, Identifiable {
+    
+    public static func == (lhs: PKMPokemon, rhs: PKMPokemon) -> Bool {
+        return lhs.id == rhs.id && lhs.name == rhs.name && lhs.hashValue == rhs.hashValue
+        
+    }
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+}
+
 extension PKMPokemonType: Hashable {
     
     public static func == (lhs: PKMPokemonType, rhs: PKMPokemonType) -> Bool {

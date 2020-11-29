@@ -19,7 +19,8 @@ class APICustom: ObservableObject {
     let pokeAPI = PokemonAPI()
     var limit = 0
     
-    func getLimit(){
+    func getAllPokemons(){
+        DispatchQueue.main.async {
         self.pokeAPI.pokemonService.fetchPokemonList(){ result in
             switch result {
             case .success(let result):
@@ -31,17 +32,19 @@ class APICustom: ObservableObject {
                 print(error.localizedDescription)
             }
         }
+        }
     }
     
     func getPokemons() {
 //        MARK: - Delete comments and hardcoded lines to get ALL pokemons -> Once database is implented due extensive loading time
 //        for id in 0 ..< limit {
-        for id in 0 ..< 50 {
+        
+        for id in 1 ..< 50 {
             pokeAPI.pokemonService.fetchPokemon(id){ result in
                 switch result {
                 case .success(let pokemon):
                     self.pokemonStore.append(pokemon)
-                    self.progressValue += (1 / 49)
+                    self.progressValue += (1 / 48)
 //                    self.progressValue += (1 / Float(self.limit))
                     print(self.progressValue)
                 case .failure(let error):

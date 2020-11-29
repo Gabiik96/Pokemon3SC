@@ -9,11 +9,8 @@ import SwiftUI
 import PokemonAPI
 
 struct AbilitiesView: View {
-    @EnvironmentObject var api: APICustom
     
-    @State private var abilities = [PKMAbility]()
-    
-    let abilitiesResource: [PKMPokemonAbility]
+    let abilities: [PKMAbility]
     
     var body: some View {
         ScrollView {
@@ -31,12 +28,6 @@ struct AbilitiesView: View {
                         
                 }
             }.padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-        }.onAppear() {
-            api.getAbilities(resource: self.abilitiesResource)
-            // Delay to have result ready
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.abilities = api.abilitiesStore
-            }
         }
     }
     

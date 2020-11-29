@@ -9,6 +9,7 @@ import SwiftUI
 import PokemonAPI
 
 struct PokemonDetailView: View {
+    @EnvironmentObject var api: APICustom
     
     let pokemon: PKMPokemon
     var categories = ["Abilities", "Stats", "Moves"]
@@ -16,42 +17,56 @@ struct PokemonDetailView: View {
     @State var pickerSelected = 0
     @State var isShiny = false
     
+    @State var abilities = [PKMAbility]()
+    @State var moves = [PKMMove]()
+    
     
     var body: some View {
-        ZStack {
-            background
-            VStack {
-                ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 100)
-                        .fill(Color.white)
-                        .opacity(0.5)
-                        .padding()
-                    ZStack {
-                        pokemonSprites
-                        HStack {
-                            basicDetails
-                            Spacer()
-                            ShineButton(toggle: $isShiny, paddingTrailing: 25)
+        NavigationView {
+            ZStack {
+                background
+                VStack {
+                    ZStack(alignment: .top) {
+                        RoundedRectangle(cornerRadius: 100)
+                            .fill(Color.white)
+                            .opacity(0.5)
+                            .padding()
+                        ZStack {
+                            pokemonSprites
+                            HStack {
+                                basicDetails
+                                Spacer()
+                                ShineButton(toggle: $isShiny, paddingTrailing: 25)
+                            }
+                        }
+                    }.frame(height: UIScreen.main.bounds.size.height / 3)
+                    pokemonName
+                    Spacer ()
+                    VStack {
+                        pickerBar
+                        Spacer()
+                        
+                        if pickerSelected == 0 {
+                            AbilitiesView(abilities: self.abilities)
+                        } else if pickerSelected == 1 {
+                            StatsView(statsResource: pokemon.stats!)
+                        } else if pickerSelected == 2 {
+                            MovesView(moves: self.moves)
                         }
                     }
-                }.frame(height: UIScreen.main.bounds.size.height / 3)
-                pokemonName
-                Spacer ()
-                VStack {
-                    pickerBar
-                    Spacer()
                     
-                    if pickerSelected == 0 {
-                        AbilitiesView(abilitiesResource: pokemon.abilities!)
-                    } else if pickerSelected == 1 {
-                        StatsView(statsResource: pokemon.stats!)
-                    } else if pickerSelected == 2 {
-                        MovesView(movesResource: pokemon.moves!)
-                    }
+                    
                 }
-                
-                
+            }.onAppear() {
+                api.getAbilities(resource: self.pokemon.abilities!)
+                api.getMoves(resource: self.pokemon.moves!)
+                // Delay to have result ready
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.abilities = api.abilitiesStore
+                    self.moves = api.movesStore
+                }
             }
+
         }
         
     }
@@ -116,35 +131,4 @@ struct PokemonDetailView: View {
         .padding(.init(top: 10, leading: 10, bottom: 0, trailing: 10))
     }
     
-}
-
-struct MovesView: View {
-    @EnvironmentObject var api: APICustom
-    
-    @State private var moves = [PKMMove]()
-    
-    let movesResource: [PKMPokemonMove]
-    
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                ForEach(moves, id: \.self) { move in
-                    Text(move.name?.uppercased() ?? "Unknown")
-                        .bold()
-                        .padding(.top, 5)
-                    if move.accuracy != nil { Text("Accuracy: \(move.accuracy!)") }
-                    if move.effectChance != nil { Text("Chance: \(move.effectChance!)") }
-                    if move.pp != nil { Text("Power points: \(move.pp!)") }
-                    if move.power != nil { Text("Base power: \(move.power!)") }
-                    Text(move.shortDescription)
-                }
-            }.padding(.init(top: 0, leading: 20, bottom: 0, trailing: 20))
-        }.onAppear() {
-            api.getMoves(resource: self.movesResource)
-            // Delay to have result ready
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.moves = api.movesStore
-            }
-        }
-    }
 }
